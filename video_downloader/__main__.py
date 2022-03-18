@@ -1,3 +1,5 @@
+"""Reservated to debug"""
+
 import typer
 
 from video_downloader import cli

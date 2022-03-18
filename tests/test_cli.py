@@ -8,12 +8,18 @@ runner = CliRunner()
 
 
 class TestCLI:
-    def test_hello(self):
+    """CLI test class"""
+
+    @staticmethod
+    def test_hello():
+        """test hello command"""
         output = runner.invoke(cli.app, "hello")
         assert output.exit_code == 0
         assert "Hello World" in output.stdout
 
-    def test_goodbye(self):
+    @staticmethod
+    def test_goodbye():
+        """test goodbye command"""
         output = runner.invoke(cli.app, "goodbye")
         assert output.exit_code == 0
         assert "Good bye" in output.stdout
