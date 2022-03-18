@@ -50,10 +50,6 @@ repos:
     rev: '3.8.3'
     hooks:
       - id: flake8
--   repo: https://github.com/GussSoares/create-requirements
-    rev: 'v0.1.0'
-    hooks:
-      - id: create-requirements
 -   repo: https://github.com/compilerla/conventional-pre-commit
     rev: 'v1.2.0'
     hooks:
@@ -67,3 +63,10 @@ repos:
         pass_filenames: false
         language: system
         types: [python]
+-   repo: local
+    hooks:
+      - id: update requirements
+        name: Update requirements.txt file
+        entry: make requirements
+        pass_filenames: false
+        language: system
