@@ -1,14 +1,15 @@
+"""Command Line Interface Video Downloader"""
+
 import typer
 from typer import Typer
 
-
-app = Typer()
+app = Typer(help=__doc__)
 
 
 @app.command()
 def hello():
     """simple docstring"""
-    typer.echo("Hello Moto")
+    typer.echo("Hello World")
 
 
 @app.command()
@@ -17,12 +18,6 @@ def goodbye():
     typer.echo("Good bye")
 
 
-@app.callback(invoke_without_command=True)
-def main(url: str):
-    """simple docstring"""
-    typer.echo(url)
-
-
-
-def entry_point():
+def entry_point():  # pragma: no cover
+    """entry point"""
     app()
