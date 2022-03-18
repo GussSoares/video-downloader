@@ -35,3 +35,7 @@ class TestVideoDownloader:
     def test_download():
         """test download method"""
         assert VideoDownloader.download() is None, "TypeError"
+
+
+if __name__ == "__main__":
+    pytest.main()
