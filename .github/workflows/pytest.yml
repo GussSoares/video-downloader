@@ -21,7 +21,3 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         make coverage
-    - name: Coveralls GitHub Action
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.github_token }}
